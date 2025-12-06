@@ -28,7 +28,7 @@ class ArchivesMenu : Menu() {
         println("Введите название нового архива")
         var name = Scanner(System.`in`).nextLine()
         while (true) {
-            if (name.trim().isEmpty()) {
+            if (name.isBlank()) {
                 println("Название архива не может быть пустым. Введите корректное название:")
                 name = Scanner(System.`in`).nextLine()
             } else {

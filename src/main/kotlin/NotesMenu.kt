@@ -40,14 +40,14 @@ class NotesMenu : Menu() {
         var text: String
         var name = Scanner(System.`in`).nextLine()
         while (true) {
-            if (name.trim().isEmpty()) {
+            if (name.isBlank()) {
                 println("Название заметки не может быть пустым. Введите корректное название:")
                 name = Scanner(System.`in`).nextLine()
             } else {
                 println("Введите текст заметки:")
                 text = Scanner(System.`in`).nextLine()
                 while (true) {
-                    if (text.trim().isEmpty()) {
+                    if (text.isBlank()) {
                         println("Текст заметки не может быть пустым. Введите корректное содержание:")
                         text = Scanner(System.`in`).nextLine()
                     } else {
