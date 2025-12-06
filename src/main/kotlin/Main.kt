@@ -1,3 +1,14 @@
+
 fun main(args: Array<String>) {
-    println("Hello World!")
+
+    val archivesMenu = ArchivesMenu()
+    val notesMenu = NotesMenu()
+    val noteMenu = NoteMenu()
+
+    archivesMenu.nextMenu = notesMenu
+    notesMenu.nextMenu = noteMenu
+    notesMenu.prevMenu = archivesMenu
+    noteMenu.prevMenu = notesMenu
+
+    archivesMenu.startMenu()
 }
